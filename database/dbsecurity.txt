@@ -1,0 +1,30 @@
+
+CREATE DATABASE [dbsecurity]
+ 
+GO
+
+USE [dbsecurity]
+GO
+
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].tblsecurity(
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[site] [varchar](100) NULL,
+	[tgl] [datetime2](0) NULL,
+	[event_type] [varchar](100) NULL,
+	[event_details] [varchar](100) NULL,
+	[check_point] [varchar](100) NULL,
+	[tour_id] [varchar](100) NULL,
+	[guard_name] [varchar](100) NULL,
+	[img] [varchar](max) NULL,
+	[audio] [varchar](max) NULL,
+	[video] [varchar](max) NULL,
+ CONSTRAINT [PK__tblsecur__3213E83F87DA8E22] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
